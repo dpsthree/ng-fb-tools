@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-fb-tools": {
+      "hosting": {
+        "tooling-demo": [
+          "ng-fb-tools"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-fb-tools"
+  }
+}

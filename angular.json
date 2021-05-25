@@ -51,7 +51,9 @@
               "apps/tooling-demo/src/favicon.ico",
               "apps/tooling-demo/src/assets"
             ],
-            "styles": ["apps/tooling-demo/src/styles.scss"],
+            "styles": [
+              "apps/tooling-demo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -116,11 +118,17 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tooling-demo"],
+          "outputs": [
+            "coverage/apps/tooling-demo"
+          ],
           "options": {
             "jestConfig": "apps/tooling-demo/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -145,7 +153,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/tooling-demo-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tooling-demo-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
