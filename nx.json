@@ -12,9 +12,17 @@
   "npmScope": "ng-fb-tools",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "NzFiMWQyZTAtZDc4YS00MGMxLThhMmMtMWE5YjFiZTdkYzk0fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
@@ -24,7 +32,9 @@
     },
     "tooling-demo-e2e": {
       "tags": [],
-      "implicitDependencies": ["tooling-demo"]
+      "implicitDependencies": [
+        "tooling-demo"
+      ]
     }
   }
 }
