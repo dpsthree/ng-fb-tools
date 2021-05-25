@@ -47,4 +47,4 @@ jobs:
           projectId: ng-fb-tools
 
       - name: E2E
-      - run: npm run affected:e2e -- --headless --dev-server-target='' --base-url=${{ steps.deploy.outputs.details_url }}
+        run: npm run affected:e2e -- --headless --dev-server-target='' --base-url=${{ steps.deploy.outputs.details_url }}
