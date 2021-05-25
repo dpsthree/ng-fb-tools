@@ -33,10 +33,10 @@ jobs:
           node-version: 15.x
 
       - run: npm install
-      - run: npm run affected:lint
+      - run: npm run affected:lint -- --base=origin/master
       - run: npm run format:check -- --base=origin/master
-      - run: npm run affected:test
-      - run: npm run affected:build
+      - run: npm run affected:test -- --base=origin/master
+      - run: npm run affected:build -- --base=origin/master
 
       - name: Deploy to preview
         id: deploy
@@ -47,4 +47,4 @@ jobs:
           projectId: ng-fb-tools
 
       - name: E2E
-        run: npm run affected:e2e -- --headless --dev-server-target='' --base-url=${{ steps.deploy.outputs.details_url }}
+        run: npm run affected:e2e -- --base=origin/master --headless --dev-server-target='' --base-url=${{ steps.deploy.outputs.details_url }}
