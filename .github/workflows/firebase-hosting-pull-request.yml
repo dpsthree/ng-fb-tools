@@ -38,7 +38,7 @@ jobs:
       - run: npm run test
       - run: npm run build
 
-      - uses: actions/checkout@v2
+      - name: Deploy to preview
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
