@@ -31,10 +31,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
+        env:
+          FB_CONFIG: ${{ secrets.FB_CONFIG }}
 
       - run: npm install
       - run: npm run affected:lint
       - run: npm run format:check
+      - run: 'echo "$FB_CONFIG" > apps/tooling-demo/src/environments/firebase-config.ts'
+      - run: cat apps/tooling-demo/src/environments/firebase-config.ts
       - run: npm run affected:test
       - run: npm run build
 

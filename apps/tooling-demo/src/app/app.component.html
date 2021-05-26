@@ -2,5 +2,7 @@
   <h1>Welcome to {{ title }}!</h1>
 </header>
 <main>
-
+  <ul e2e="todo-list" *ngIf="items | async as items">
+    <li *ngFor="let item of items">{{ item.label }}</li>
+  </ul>
 </main>
