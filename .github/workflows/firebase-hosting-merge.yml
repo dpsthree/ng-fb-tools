@@ -35,6 +35,7 @@ jobs:
           node-version: 15.x
 
       - run: npm install
+      - run: echo ${{ secrets.FB_CONFIG }} > apps/tooling-demo/src/environments/firebase-config.ts
       - run: npm run build
 
       - name: Deploy to live
