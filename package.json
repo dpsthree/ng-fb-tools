@@ -16,7 +16,7 @@
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
-    "affected:e2e": "nx affected:e2e --base=origin/master --headless --dev-server-target",
+    "affected:e2e": "nx affected:e2e --base=origin/master --headless --dev-server-target=''",
     "affected:e2e:local": "nx affected:e2e --base=origin/master --headless",
     "affected:test": "nx affected:test --base=origin/master",
     "affected:lint": "nx affected:lint --base=origin/master",
