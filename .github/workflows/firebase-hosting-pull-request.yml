@@ -35,7 +35,7 @@ jobs:
       - run: npm install
       - run: npm run affected:lint
       - run: npm run format:check
-      - run: echo ${{ secrets.FB_CONFIG }} > apps/tooling-demo/src/environments/firebase-config.ts
+      - run: echo ${{ secrets.FB_CONFIG }} >> apps/tooling-demo/src/environments/firebase-config.ts
       - run: npm run affected:test
       - run: npm run build
 
