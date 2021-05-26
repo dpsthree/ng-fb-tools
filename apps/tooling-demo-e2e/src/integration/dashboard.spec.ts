@@ -8,8 +8,7 @@ describe('the tooling-demo dashboard', () => {
   });
 
   describe('list controls', () => {
-
-    const mockItem = {label: 'test entry'};
+    const mockItem = { label: 'test entry' };
 
     beforeEach(() => {
       cy.window().its('dashboardModel').invoke('clearItems');

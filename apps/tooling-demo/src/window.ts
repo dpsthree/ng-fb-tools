@@ -6,9 +6,7 @@ declare global {
     Cypress?: any;
     dashboardModel: {
       clearItems: () => Promise<void>;
-      addItem: (newItem: {
-        label: string;
-      }) => Promise<void>;
+      addItem: (newItem: { label: string }) => Promise<void>;
     };
   }
 }
